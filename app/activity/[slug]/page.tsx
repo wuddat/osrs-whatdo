@@ -34,7 +34,20 @@ export default async function Page(props: PageProps<"/activity/[slug]">) {
         width={600}
         alt={item.title}
       />
-      <ReactMarkdown>{item.text}</ReactMarkdown>
+      <div className="grid grid-cols-2">
+        <ReactMarkdown>{item.text}</ReactMarkdown>
+        <div>
+          Requirements:
+          <ReactMarkdown>{item.requirements.quests}</ReactMarkdown>
+          {item.requirements.skills.map((s, i) => {
+            return (
+              <div key={s}>
+                {s} - {item.requirements.skillLevels[i]}
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </>
   );
 }

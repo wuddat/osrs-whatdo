@@ -2,6 +2,12 @@
   {
     "slug": "gotr",
     "title": "Guardians of the Rift",
-    "text": "Welcome to **EpicCare**! Visit [our docs](https://example.com) for more info."
+    "text": "Welcome to **EpicCare**! Visit [our docs](https://example.com) for more info.",
+    "requirements": {
+      "quests": "[Hard Quest](https://example.com)",
+
+      "skills": ["runecrafting"],
+      "skillLevels": [50]
+    }
   }
 ]
