@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Box } from "@mui/material";
 import OSRSThemeProvider from '@/components/ThemeProvider';
 import { runescapeFont, runescapeBold, runescapeSmall } from './fonts';
 import AppBar from '@/components/AppBar';
@@ -18,8 +19,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${runescapeFont.variable} ${runescapeBold.variable} ${runescapeSmall.variable}`}>
         <OSRSThemeProvider>
+          <Box sx={{
+            marginX: '10em'
+            }}>
           <AppBar />
           {children}
+          </Box>
         </OSRSThemeProvider>
       </body>
     </html>

@@ -1,8 +1,10 @@
 // app/[slug]/page.tsx
 import { bySlug, allSlugs } from "@/services/content";
+import { Typography } from "@mui/material";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
+import {Stack,Box, Card, CardMedia} from "@mui/material";
 
 export const revalidate = 60;
 
@@ -27,27 +29,32 @@ export default async function Page(props: PageProps<"/activity/[slug]">) {
 
   return (
     <>
-      <h1 className="text-4xl">{item!.title}</h1>
-      <Image
-        src={`https://cdn.jsdelivr.net/gh/wuddat/osrs-whatdo/public/images/${item.slug}.png`}
-        height={200}
-        width={600}
-        alt={item.title}
-      />
-      <div className="grid grid-cols-2">
-        <ReactMarkdown>{item.text}</ReactMarkdown>
-        <div>
-          Requirements:
-          <ReactMarkdown>{item.requirements.quests}</ReactMarkdown>
+<Stack direction="row" spacing={2} sx={{justifyContent: 'space-around', alignItems: 'center'}}>
+      <Typography variant="h3" my={'10px'}>{item!.title}</Typography>
+      <Stack direction="row" spacing ={2}>
+          <Typography variant="h6">Requirements:</Typography>
+          <Typography variant="h6"><ReactMarkdown>{item.requirements.quests}</ReactMarkdown></Typography>
+          
           {item.requirements.skills.map((s, i) => {
             return (
-              <div key={s}>
+              <Typography variant="h6" key={s}>
                 {s} - {item.requirements.skillLevels[i]}
-              </div>
+              </Typography>
             );
           })}
-        </div>
-      </div>
+        </Stack>
+        </Stack>
+        <Stack direction="row" spacing={2} sx={{justifyContent: 'space-between'}}>
+        <ReactMarkdown>{item.text}</ReactMarkdown>
+        
+        <Card sx={{maxWidth: 800}}>
+          <CardMedia 
+          component="img"
+        image={`https://cdn.jsdelivr.net/gh/wuddat/osrs-whatdo/public/images/${item.slug}.png`}
+        alt={item.title}
+        />
+        </Card>
+      </Stack>
     </>
   );
 }
