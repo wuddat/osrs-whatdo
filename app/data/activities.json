@@ -358,5 +358,394 @@
       "skills": [],
       "skillLevels": []
     }
+  },
+  {
+    "slug": "chambers-of-xeric",
+    "title": "Chambers of Xeric (CoX)",
+    "text": "OSRS’s first raid. Randomised rooms leading to **The Great Olm**. Supports solo to very large teams.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "chambers-of-xeric-cm",
+    "title": "Chambers of Xeric (Challenge Mode)",
+    "text": "Harder variant of CoX with fixed room set and timed completion for cosmetic rewards.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "theatre-of-blood",
+    "title": "Theatre of Blood (ToB)",
+    "text": "Linear, mechanics-heavy raid in Ver Sinhaza. Six encounters ending with **Verzik Vitur**.",
+    "requirements": {
+      "quests": "[Priest in Peril](https://oldschool.runescape.fandom.com/wiki/Priest_in_Peril)",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "theatre-of-blood-hm",
+    "title": "Theatre of Blood: Hard Mode",
+    "text": "Harder, remixed mechanics and timing challenges. Cosmetic unlocks and unique pet recolours.",
+    "requirements": {
+      "quests": "[Priest in Peril](https://oldschoolrunescape.fandom.com/wiki/Priest_in_Peril)",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "tombs-of-amascut",
+    "title": "Tombs of Amascut (ToA)",
+    "text": "Invocation-based raid with scalable difficulty. Encounters include **Akkha, Ba-Ba, Kephri, Zebak**, finale **Warden(s)**.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+
+  // === Major non-Slayer combat bosses & PvM challenges ===
+
+  {
+    "slug": "nex",
+    "title": "Nex",
+    "text": "Zarosian general in the Ancient Prison (God Wars Dungeon). Team-focused five-phase fight.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "general-graardor",
+    "title": "General Graardor (Bandos GWD)",
+    "text": "Bandos boss in the God Wars Dungeon. Heavy melee damage and minions.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "kreearra",
+    "title": "Kree'arra (Armadyl GWD)",
+    "text": "Ranged-heavy Armadyl boss with strong knockback specials.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "commander-zilyana",
+    "title": "Commander Zilyana (Saradomin GWD)",
+    "text": "Fast Saradomin boss with high magic/melee pressure and minions.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "kril-tsutsaroth",
+    "title": "K'ril Tsutsaroth (Zamorak GWD)",
+    "text": "Zamorak boss with prayer-smash special and strong melee/magic damage.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+
+  {
+    "slug": "corporeal-beast",
+    "title": "Corporeal Beast",
+    "text": "Mass-friendly spectral beast weak to **Stab** and **Bandos godsword**/DWH specs; avoids non-spec damage with Core mechanics.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+
+  {
+    "slug": "zulrah",
+    "title": "Zulrah",
+    "text": "Solo rotation boss with phase patterns and venom. Great unique drops (**Serp helm**, **Toxic bow**, etc.).",
+    "requirements": {
+      "quests": "[Regicide](https://oldschoolrunescape.fandom.com/wiki/Regicide)",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "vorkath",
+    "title": "Vorkath",
+    "text": "Post-quest repeatable dragon boss with special attacks (acid, freeze, bomb). Lucrative uniques.",
+    "requirements": {
+      "quests": "[Dragon Slayer II](https://oldschoolrunescape.fandom.com/wiki/Dragon_Slayer_II)",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+
+  {
+    "slug": "the-nightmare",
+    "title": "The Nightmare of Ashihama",
+    "text": "Group boss with totems, parasite/curse mechanics and phase transitions.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "phosanis-nightmare",
+    "title": "Phosani's Nightmare",
+    "text": "Harder solo instance of The Nightmare with tightened timings and additional mechanics.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+
+  {
+    "slug": "duke-sucellus",
+    "title": "Duke Sucellus",
+    "text": "One of the **Desert Treasure II** bosses. Arcane projectile & potion mechanics; unique rings.",
+    "requirements": {
+      "quests": "[Desert Treasure II – The Fallen Empire](https://oldschoolrunescape.fandom.com/wiki/Desert_Treasure_II_-_The_Fallen_Empire)",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "the-leviathan",
+    "title": "The Leviathan",
+    "text": "DT2 boss with wave walls and projectile patterns; learnable movement checks.",
+    "requirements": {
+      "quests": "[Desert Treasure II – The Fallen Empire](https://oldschoolrunescape.fandom.com/wiki/Desert_Treasure_II_-_The_Fallen_Empire)",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "the-whisperer",
+    "title": "The Whisperer",
+    "text": "DT2 siren boss with sanity/orb mechanics and shadow pools.",
+    "requirements": {
+      "quests": "[Desert Treasure II – The Fallen Empire](https://oldschoolrunescape.fandom.com/wiki/Desert_Treasure_II_-_The_Fallen_Empire)",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "vardorvis",
+    "title": "Vardorvis",
+    "text": "DT2 melee-pressure boss with grab/line attacks and axe throws.",
+    "requirements": {
+      "quests": "[Desert Treasure II – The Fallen Empire](https://oldschoolrunescape.fandom.com/wiki/Desert_Treasure_II_-_The_Fallen_Empire)",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+
+  {
+    "slug": "the-gauntlet",
+    "title": "The Gauntlet",
+    "text": "Timed prep dungeon culminating in **Crystalline Hunllef**. Great for practice and crystal loot.",
+    "requirements": {
+      "quests": "[Song of the Elves](https://runefanatics.com/osrs/song-of-the-elves-osrs/)",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "corrupted-gauntlet",
+    "title": "The Corrupted Gauntlet",
+    "text": "Harder Gauntlet variant with tighter prep and Hunllef checks; higher reward potential.",
+    "requirements": {
+      "quests": "[Song of the Elves](https://runefanatics.com/osrs/song-of-the-elves-osrs/)",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+
+  {
+    "slug": "dagannoth-kings",
+    "title": "Dagannoth Kings (Rex, Prime, Supreme)",
+    "text": "Tri-boss arena with combat triangle weaknesses; rings & bones/skins uniques.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+
+  {
+    "slug": "kalphite-queen",
+    "title": "Kalphite Queen (KQ)",
+    "text": "Two-phase boss (form swaps prayers). Iconic desert encounter.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "king-black-dragon",
+    "title": "King Black Dragon (KBD)",
+    "text": "Classic dragon boss with multiple breath types; accessible for mid-level PvM.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "giant-mole",
+    "title": "Giant Mole",
+    "text": "Burrowing boss under Falador Park; beginner-friendly money maker.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+
+  {
+    "slug": "sarachnis",
+    "title": "Sarachnis",
+    "text": "Mid-level spider boss in Forthos Dungeon; supply-focused loot and pet chance.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+
+  {
+    "slug": "phantom-muspah",
+    "title": "Phantom Muspah",
+    "text": "Shapeshifting boss with prayer swaps and spike phase. Strong ranged/magic checks.",
+    "requirements": {
+      "quests": "[Desert Treasure II – prerequisite miniquest chain](https://oldschoolrunescape.fandom.com/wiki/Desert_Treasure_II_-_The_Fallen_Empire)",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+
+  // Wilderness (multi & singles+ reworks)
+
+  {
+    "slug": "callisto",
+    "title": "Callisto (Multi Wilderness)",
+    "text": "Bear boss with heavy melee & pushback. High PK risk; team recommended.",
+    "requirements": { "quests": "", "skills": [], "skillLevels": [] }
+  },
+  {
+    "slug": "artio",
+    "title": "Artio (Singles+ Wilderness)",
+    "text": "Callisto’s singles variant in lower Wilderness. Safer access for soloers.",
+    "requirements": { "quests": "", "skills": [], "skillLevels": [] }
+  },
+  {
+    "slug": "venenatis",
+    "title": "Venenatis (Multi Wilderness)",
+    "text": "Spider boss with web snares and ranged pressure.",
+    "requirements": { "quests": "", "skills": [], "skillLevels": [] }
+  },
+  {
+    "slug": "spindel",
+    "title": "Spindel (Singles+ Wilderness)",
+    "text": "Venenatis’s singles variant with toned stats but similar mechanics.",
+    "requirements": { "quests": "", "skills": [], "skillLevels": [] }
+  },
+  {
+    "slug": "vetion",
+    "title": "Vet'ion (Multi Wilderness)",
+    "text": "Undead champion with hounds and shockwaves. High-value uniques.",
+    "requirements": { "quests": "", "skills": [], "skillLevels": [] }
+  },
+  {
+    "slug": "calvarion",
+    "title": "Calvar'ion (Singles+ Wilderness)",
+    "text": "Singles variant of Vet’ion; refined mechanics and reduced stats.",
+    "requirements": { "quests": "", "skills": [], "skillLevels": [] }
+  },
+  {
+    "slug": "chaos-elemental",
+    "title": "Chaos Elemental",
+    "text": "Randomized disarm/teleport effects; deep Wilderness roaming boss.",
+    "requirements": { "quests": "", "skills": [], "skillLevels": [] }
+  },
+  {
+    "slug": "chaos-fanatic",
+    "title": "Chaos Fanatic",
+    "text": "Wilderness demi-boss with magic AoE and green orb spec.",
+    "requirements": { "quests": "", "skills": [], "skillLevels": [] }
+  },
+  {
+    "slug": "crazy-archaeologist",
+    "title": "Crazy Archaeologist",
+    "text": "Wilderness demi-boss with explosive books and ranged attacks.",
+    "requirements": { "quests": "", "skills": [], "skillLevels": [] }
+  },
+  {
+    "slug": "scorpia",
+    "title": "Scorpia",
+    "text": "Wilderness scorpion boss with healing guardians; magic recommended.",
+    "requirements": { "quests": "", "skills": [], "skillLevels": [] }
+  },
+
+  // TzHaar challenges
+
+  {
+    "slug": "tzhaar-fight-cave",
+    "title": "TzHaar Fight Cave",
+    "text": "Wave challenge culminating in **TzTok-Jad** for the **Fire cape**.",
+    "requirements": { "quests": "", "skills": [], "skillLevels": [] }
+  },
+  {
+    "slug": "the-inferno",
+    "title": "The Inferno",
+    "text": "Endgame wave challenge culminating in **TzKal-Zuk** for the **Infernal cape**.",
+    "requirements": { "quests": "", "skills": [], "skillLevels": [] }
+  },
+
+  // Other notable non-Slayer bosses
+
+  {
+    "slug": "bryophyta",
+    "title": "Bryophyta",
+    "text": "F2P moss giant boss (key-based) with beginner-friendly mechanics.",
+    "requirements": { "quests": "", "skills": [], "skillLevels": [] }
+  },
+  {
+    "slug": "obor",
+    "title": "Obor",
+    "text": "F2P hill giant boss (key-based); simple melee-focused fight.",
+    "requirements": { "quests": "", "skills": [], "skillLevels": [] }
+  },
+
+  // Varlamore PvM
+
+  {
+    "slug": "fortis-colosseum",
+    "title": "Fortis Colosseum",
+    "text": "Wave-based PvM in **Varlamore** with **Glory** scoring and escalating difficulty.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
   }
 ]
+
