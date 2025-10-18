@@ -13,7 +13,7 @@ import {
   AccordionDetails,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { IMPORTANT_QUESTS, Quest } from '@/data/quests';
+import { ALL_QUESTS, Quest } from '@/data/quests';
 import { saveUserQuestData, getUserQuestData } from '@/utils/questStorage';
 
 interface QuestSelectorProps {
@@ -51,15 +51,15 @@ export default function QuestSelector({ username }: QuestSelectorProps) {
   };
 
   const questsByCategory = {
-    grandmaster: IMPORTANT_QUESTS.filter((q) => q.category === 'grandmaster'),
-    master: IMPORTANT_QUESTS.filter((q) => q.category === 'master'),
-    experienced: IMPORTANT_QUESTS.filter((q) => q.category === 'experienced'),
-    intermediate: IMPORTANT_QUESTS.filter((q) => q.category === 'intermediate'),
-    novice: IMPORTANT_QUESTS.filter((q) => q.category === 'novice'),
+    grandmaster: ALL_QUESTS.filter((q) => q.category === 'grandmaster'),
+    master: ALL_QUESTS.filter((q) => q.category === 'master'),
+    experienced: ALL_QUESTS.filter((q) => q.category === 'experienced'),
+    intermediate: ALL_QUESTS.filter((q) => q.category === 'intermediate'),
+    novice: ALL_QUESTS.filter((q) => q.category === 'novice'),
   };
 
   const totalQuestPoints = completedQuests.reduce((sum, questId) => {
-    const quest = IMPORTANT_QUESTS.find((q) => q.id === questId);
+    const quest = ALL_QUESTS.find((q) => q.id === questId);
     return sum + (quest?.questPoints || 0);
   }, 0);
 
@@ -68,7 +68,7 @@ export default function QuestSelector({ username }: QuestSelectorProps) {
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
         <Typography variant="h6">Quest Progress</Typography>
         <Typography variant="body2" sx={{ color: 'var(--osrs-gold)' }}>
-          {completedQuests.length} / {IMPORTANT_QUESTS.length} quests ({totalQuestPoints} QP)
+          {completedQuests.length} / {ALL_QUESTS.length} quests ({totalQuestPoints} QP)
         </Typography>
       </Box>
 

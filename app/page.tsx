@@ -151,10 +151,12 @@ export default function Home() {
             </Typography>
 
             <Grid container spacing={2} alignItems={'center'}>
-            {Object.entries(playerData.skills).map(([skill, data]) => (
-              <Grid key={skill} size={{xs:6, sm: 4, md: 2, lg: 1}}> 
+            {Object.entries(playerData.skills)
+            .filter(([skill]) => skill !== 'overall')
+            .map(([skill, data]) => (
+              <Grid key={skill} size={{xs:6, sm: 4, md: 2, lg: 1}} sx={{minWidth: 'fit-content'}}> 
               <SkillBadge  skill={skill} level={data.level}/>
-               <Typography key={skill}>
+               <Typography sx={{whiteSpace: 'nowrap'}}>
                 {data.experience.toLocaleString()} xp
               </Typography>
               </Grid>
