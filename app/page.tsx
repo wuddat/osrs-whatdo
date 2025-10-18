@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { TextField, Button, Box, Typography, CircularProgress } from '@mui/material';
+import { TextField, Button, Box, Typography, CircularProgress, ToggleButton, ToggleButtonGroup } from '@mui/material';
 import { fetchPlayerStats } from '@/services/osrsApi';
 import { PlayerStats } from '@/types/osrs';
 
@@ -10,6 +10,14 @@ export default function Home() {
   const [playerData, setPlayerData] = useState<PlayerStats | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
+
+  const handleFilterChange = (
+    event: React.MouseEvent<HTMLElement>,
+    newFilters: string[]
+  ) => {
+    setSelectedFilters(newFilters);
+  };
 
   const handleSearch = async () => {
     if (!username.trim()) return;
@@ -32,26 +40,46 @@ export default function Home() {
     <Box
       className="panel"
       sx={{
-        p: 'var(--osrs-xl)',
-        maxWidth: 800,
-        mx: 'auto',
-        mt: 'var(--osrs-2xl)',
+        minHeight: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        p: 10
       }}
     >
+      <Box>
       {/* Title */}
       <Typography
-        variant="h3"
         gutterBottom
         sx={{
-          fontFamily: 'RuneScape Bold',
-          textTransform: 'uppercase',
-          color: 'var(--osrs-text-light)',
           textAlign: 'center',
+          fontSize: '6em'
         }}
       >
         WhatShouldIDo - OSRS
       </Typography>
-     
+
+     {/* Filter Buttons */}
+      <Box sx={{ mb: 3 }}>
+        <Typography variant="subtitle1" gutterBottom>
+          Filter by activity type:
+        </Typography>
+        <ToggleButtonGroup
+          value={selectedFilters}
+          onChange={handleFilterChange}
+          aria-label="activity filters"
+        >
+          <ToggleButton value="pvm" aria-label="pvm">
+            PvM
+          </ToggleButton>
+          <ToggleButton value="skilling" aria-label="skilling">
+            Skilling
+          </ToggleButton>
+          <ToggleButton value="quests" aria-label="quests">
+            Quests
+          </ToggleButton>
+        </ToggleButtonGroup>
+      </Box>
+
        <Box
         sx={{
           display: 'flex',
@@ -98,19 +126,11 @@ export default function Home() {
             Total XP: {playerData.skills.overall.experience.toLocaleString()}
           </Typography>
 
-          {/* Quest Data Display */}
-          {playerData.quests && (
-            <Box sx={{ mt: 3, p: 2, bgcolor: '#f5f5f5', borderRadius: 2 }}>
-              <Typography variant="h6" gutterBottom>
-                Quest Progress
-              </Typography>
-              <Typography>
-                Quest Points: {playerData.quests.questPoints} / 293
-              </Typography>
-              <Typography variant="caption" color="text.secondary">
-                ({Math.round((playerData.quests.questPoints / 293) * 100)}% complete)
-              </Typography>
-            </Box>
+          {/* Display selected filters */}
+          {selectedFilters.length > 0 && (
+            <Typography variant="body2" sx={{ mt: 2, color: 'text.secondary' }}>
+              Selected filters: {selectedFilters.join(', ')}
+            </Typography>
           )}
 
           {/* Skills Display */}
@@ -126,6 +146,7 @@ export default function Home() {
           </Box>
         </Box>
       )}
+      </Box>
     </Box>
   );
 }

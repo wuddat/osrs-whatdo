@@ -4,13 +4,6 @@ export interface PlayerSkill {
   experience: number;
 }
 
-export interface QuestData {
-  complete: number;
-  notStarted: number;
-  started: number;
-  questPoints: number;
-}
-
 export interface PlayerStats {
   username: string;
   skills: {
@@ -40,6 +33,5 @@ export interface PlayerStats {
     construction: PlayerSkill;
   };
   combatLevel: number;
-  quests?: QuestData;
 }
 

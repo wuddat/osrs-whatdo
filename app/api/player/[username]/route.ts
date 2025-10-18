@@ -38,42 +38,10 @@ export async function GET(
 
     const combatLevel = calculateCombatLevel(skills);
 
-    // Try to fetch quest data from WiseOldMan
-    let questData = undefined;
-    try {
-      const womResponse = await fetch(
-        `https://api.wiseoldman.net/v2/players/username/${encodeURIComponent(username)}`,
-        {
-          headers: {
-            'User-Agent': 'WhatShouldIDo-App'
-          }
-        }
-      );
-     
-      if (womResponse.ok) {
-        const womJson = await womResponse.json();
-        const questPoints = womJson.latestSnapshot?.data?.quest_points?.score;
-       
-        if (questPoints !== undefined) {
-          questData = {
-            questPoints: questPoints,
-            complete: null,
-            started: null,
-            notStarted: null
-          };
-          console.log('Quest data retrieved:', questData);
-        }
-      }
-    } catch (questError) {
-      // Quest data not available, continue without it
-      console.log('Quest data not available for user:', username);
-    }
-
     return NextResponse.json({
       username,
       skills,
       combatLevel,
-      quests: questData
     });
   } catch (error) {
     return NextResponse.json(

@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+
+/* OSRS Color Palette */
+:root {
+  /* Primary Colors */
+  --osrs-yellow: #FFCF3F;
+  --osrs-gold: #E6A519;
+  --osrs-brown: #694D23;
+  --osrs-dark-brown: #382D1A;
+  --osrs-black: #0F0F0F;
+
+  /* UI Colors */
+  --osrs-background: #2E2C29;
+  --osrs-border: #474745;
+  --osrs-panel: #3E3A32;
+  
+  /* Text Colors */
+  --osrs-text-primary: #FFCF3F;
+  --osrs-text-secondary: #C0C0C0;
+  --osrs-text-dark: #0F0F0F;
+}
+
+body {
+  background-color: var(--osrs-background);
+  color: var(--osrs-text-secondary);
+  font-family: var(--font-runescape), sans-serif;
+}
+
+h3 {
+    font-family: var(--font-runescape), sans-serif;
+}
+
+/* Font utility classes */
+.font-runescape {
+  font-family: var(--font-runescape);
+}
+
+.font-runescape-bold {
+  font-family: var(--font-runescape-bold);
+}
+
+.font-runescape-small {
+  font-family: var(--font-runescape-small);
+}
