@@ -410,7 +410,7 @@
     }
   },
 
-  // === Major non-Slayer combat bosses & PvM challenges ===
+
 
   {
     "slug": "nex",
@@ -642,7 +642,7 @@
     }
   },
 
-  // Wilderness (multi & singles+ reworks)
+
 
   {
     "slug": "callisto",
@@ -705,7 +705,7 @@
     "requirements": { "quests": "", "skills": [], "skillLevels": [] }
   },
 
-  // TzHaar challenges
+
 
   {
     "slug": "tzhaar-fight-cave",
@@ -720,7 +720,7 @@
     "requirements": { "quests": "", "skills": [], "skillLevels": [] }
   },
 
-  // Other notable non-Slayer bosses
+
 
   {
     "slug": "bryophyta",
@@ -735,7 +735,7 @@
     "requirements": { "quests": "", "skills": [], "skillLevels": [] }
   },
 
-  // Varlamore PvM
+
 
   {
     "slug": "fortis-colosseum",

@@ -35,3 +35,8 @@ export interface PlayerStats {
   combatLevel: number;
 }
 
+export interface UserQuestData {
+  username: string;
+  completedQuests: string[]; // Quest IDs
+  lastUpdated: number; // Timestamp
+}

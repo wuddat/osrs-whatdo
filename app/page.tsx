@@ -1,9 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { TextField, Button, Box, Typography, CircularProgress, ToggleButton, ToggleButtonGroup } from '@mui/material';
+import { TextField, Button, Box, Typography, CircularProgress, ToggleButton, ToggleButtonGroup, Grid } from '@mui/material';
 import { fetchPlayerStats } from '@/services/osrsApi';
 import { PlayerStats } from '@/types/osrs';
+import SkillBadge from '@/components/SkillBadge';
+import QuestSelector from '@/components/QuestSelector';
 
 export default function Home() {
   const [username, setUsername] = useState('');
@@ -49,13 +51,22 @@ export default function Home() {
       <Box>
       {/* Title */}
       <Typography
+      gutterBottom
+        sx={{
+          textAlign: 'center',
+          fontSize: '6em',
+          border: 'solid'
+        }}
+      >
+        OSRS What-Do
+      </Typography>
+      <Typography
         gutterBottom
         sx={{
           textAlign: 'center',
-          fontSize: '6em'
         }}
       >
-        WhatShouldIDo - OSRS
+        Lost? Confused? Unsure what to do next? Type your username below, pick your vibe, and let us help you set your next OSRS goal!
       </Typography>
 
      {/* Filter Buttons */}
@@ -138,12 +149,19 @@ export default function Home() {
             <Typography variant="h6" gutterBottom>
               Skills
             </Typography>
+
+            <Grid container spacing={2} alignItems={'center'}>
             {Object.entries(playerData.skills).map(([skill, data]) => (
-              <Typography key={skill}>
-                {skill.charAt(0).toUpperCase() + skill.slice(1)}: {data.level} (XP: {data.experience.toLocaleString()})
+              <Grid key={skill} size={{xs:6, sm: 4, md: 2, lg: 1}}> 
+              <SkillBadge  skill={skill} level={data.level}/>
+               <Typography key={skill}>
+                {data.experience.toLocaleString()} xp
               </Typography>
+              </Grid>
             ))}
+            </Grid>
           </Box>
+          <QuestSelector username={playerData.username} />
         </Box>
       )}
       </Box>
