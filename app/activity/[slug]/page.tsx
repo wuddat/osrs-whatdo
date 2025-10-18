@@ -29,7 +29,7 @@ export default async function Page(props: PageProps<"/activity/[slug]">) {
     <>
       <h1 className="text-4xl">{item!.title}</h1>
       <Image
-        src={`/images/${item.slug}.png`}
+        src={`https://cdn.jsdelivr.net/gh/wuddat/osrs-whatdo/public/images/${item.slug}.png`}
         height={200}
         width={600}
         alt={item.title}
