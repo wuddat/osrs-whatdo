@@ -2,12 +2,361 @@
   {
     "slug": "gotr",
     "title": "Guardians of the Rift",
-    "text": "Welcome to **EpicCare**! Visit [our docs](https://example.com) for more info.",
+    "text": "Runecraft-focused activity in the Temple of the Eye. Great points and unique rewards. See the wiki for rotation info and tips.",
     "requirements": {
-      "quests": "[Hard Quest](https://example.com)",
-
+      "quests": "[Temple of the Eye](https://oldschool.runescape.wiki/w/Temple_of_the_Eye)",
       "skills": ["runecrafting"],
+      "skillLevels": [27]
+    }
+  },
+  {
+    "slug": "tempoross",
+    "title": "Tempoross",
+    "text": "Fishing boss (‘Colossus of the Sea’). Chill group-friendly activity with solid Fishing XP and reward caskets.",
+    "requirements": {
+      "quests": "",
+      "skills": ["fishing"],
+      "skillLevels": [35]
+    }
+  },
+  {
+    "slug": "wintertodt",
+    "title": "Wintertodt",
+    "text": "Firemaking boss in the north. Excellent early FM XP with supply crates and uniques.",
+    "requirements": {
+      "quests": "",
+      "skills": ["firemaking"],
       "skillLevels": [50]
+    }
+  },
+  {
+    "slug": "pest-control",
+    "title": "Pest Control",
+    "text": "Team-based combat defense game for Void Knight points and Void gear.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "barbarian-assault",
+    "title": "Barbarian Assault",
+    "text": "Co-op wave defense with distinct roles (Attacker, Defender, Healer, Collector). Unlock Fighter torso and more.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "castle-wars",
+    "title": "Castle Wars",
+    "text": "Capture-the-flag PvP with catapults, barricades, and tickets for cosmetics.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "soul-wars",
+    "title": "Soul Wars",
+    "text": "Large-scale PvP/PvM hybrid for Zeal points (imbues, Slayer XP, cosmetics).",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "last-man-standing",
+    "title": "Last Man Standing",
+    "text": "Battle-royale style PvP in instanced arenas with standardized gear and supplies.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "trouble-brewing",
+    "title": "Trouble Brewing",
+    "text": "Brewing minigame on Mos Le’Harmless for The Cream outfit and cosmetics.",
+    "requirements": {
+      "quests": "[Cabin Fever](https://oldschool.runescape.wiki/w/Cabin_Fever)",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "pyramid-plunder",
+    "title": "Pyramid Plunder",
+    "text": "High-intensity Thieving in Sophanem pyramids; great XP with scepter chance.",
+    "requirements": {
+      "quests": "[Icthlarin's Little Helper](https://oldschool.runescape.wiki/w/Icthlarin%27s_Little_Helper)",
+      "skills": ["thieving"],
+      "skillLevels": [21]
+    }
+  },
+  {
+    "slug": "sorceress-garden",
+    "title": "Sorceress's Garden",
+    "text": "Stealthy seasonal gardens for Thieving/Herblore resources.",
+    "requirements": {
+      "quests": "[Prince Ali Rescue](https://oldschool.runescape.wiki/w/Prince_Ali_Rescue)",
+      "skills": ["thieving"],
+      "skillLevels": [1]
+    }
+  },
+  {
+    "slug": "mage-training-arena",
+    "title": "Mage Training Arena",
+    "text": "Four rooms with unique spell challenges to earn Pizazz points and magic gear.",
+    "requirements": {
+      "quests": "",
+      "skills": ["magic"],
+      "skillLevels": [7]
+    }
+  },
+  {
+    "slug": "barrows",
+    "title": "Barrows",
+    "text": "Combat puzzle with six Barrows brothers; chance at set pieces and runes.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "fishing-trawler",
+    "title": "Fishing Trawler",
+    "text": "Co-op fishing voyage for Angler outfit and unique fish.",
+    "requirements": {
+      "quests": "",
+      "skills": ["fishing"],
+      "skillLevels": [15]
+    }
+  },
+  {
+    "slug": "tithe-farm",
+    "title": "Tithe Farm",
+    "text": "Farming minigame in Hosidius for points (seed box, farmer’s outfit).",
+    "requirements": {
+      "quests": "",
+      "skills": ["farming"],
+      "skillLevels": [34]
+    }
+  },
+  {
+    "slug": "motherlode-mine",
+    "title": "Motherlode Mine",
+    "text": "AFK-friendly Mining with pay-dirt veins; Golden nuggets for upgrades.",
+    "requirements": {
+      "quests": "",
+      "skills": ["mining"],
+      "skillLevels": [30]
+    }
+  },
+  {
+    "slug": "blast-furnace",
+    "title": "Blast Furnace",
+    "text": "Fast Smithing method with reduced bars per ore; foreman fee below 60 Smithing.",
+    "requirements": {
+      "quests": "",
+      "skills": ["smithing"],
+      "skillLevels": [1]
+    }
+  },
+  {
+    "slug": "giants-foundry",
+    "title": "Giants' Foundry",
+    "text": "Smith bespoke giant swords for points and unique smithing rewards.",
+    "requirements": {
+      "quests": "",
+      "skills": ["smithing"],
+      "skillLevels": [15]
+    }
+  },
+  {
+    "slug": "hallowed-sepulchre",
+    "title": "Hallowed Sepulchre",
+    "text": "High-skill Agility course with traps and coffins; strong GP/hr and ring upgrades.",
+    "requirements": {
+      "quests": "[Sins of the Father](https://oldschool.runescape.wiki/w/Sins_of_the_Father)",
+      "skills": ["agility"],
+      "skillLevels": [52]
+    }
+  },
+  {
+    "slug": "temple-trekking",
+    "title": "Temple Trekking / Burgh de Rott Ramble",
+    "text": "Escort minigame through Morytania; supplies, XP tomes, and unique cosmetics.",
+    "requirements": {
+      "quests": "[In Aid of the Myreque](https://oldschool.runescape.wiki/w/In_Aid_of_the_Myreque)",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "tai-bwo-wannai-cleanup",
+    "title": "Tai Bwo Wannai Cleanup",
+    "text": "Cut jungle, repair fences, and gain favor for trading sticks.",
+    "requirements": {
+      "quests": "[Jungle Potion](https://oldschool.runescape.wiki/w/Jungle_Potion)",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "tears-of-guthix",
+    "title": "Tears of Guthix",
+    "text": "Weekly cave activity: gather blue tears for XP in your lowest skill.",
+    "requirements": {
+      "quests": "[Tears of Guthix (quest)](https://oldschool.runescape.wiki/w/Tears_of_Guthix_(quest))",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "gnome-restaurant",
+    "title": "Gnome Restaurant",
+    "text": "Delivery minigame for the Grand Tree; food rewards and gracefulness training.",
+    "requirements": {
+      "quests": "",
+      "skills": ["cooking", "agility"],
+      "skillLevels": [10, 1]
+    }
+  },
+  {
+    "slug": "brimhaven-agility-arena",
+    "title": "Brimhaven Agility Arena",
+    "text": "Ticket-based Agility arena with rotating pillars and trap obstacles.",
+    "requirements": {
+      "quests": "",
+      "skills": ["agility"],
+      "skillLevels": [1]
+    }
+  },
+  {
+    "slug": "warriors-guild",
+    "title": "Warriors' Guild",
+    "text": "Combat mini-activities for tokens and Dragon defender grind.",
+    "requirements": {
+      "quests": "",
+      "skills": ["attack", "strength"],
+      "skillLevels": [130]
+    }
+  },
+  {
+    "slug": "rogues-den",
+    "title": "Rogues' Den",
+    "text": "Maze-like thieving/agility course for Rogue outfit.",
+    "requirements": {
+      "quests": "",
+      "skills": ["thieving", "agility"],
+      "skillLevels": [50, 50]
+    }
+  },
+  {
+    "slug": "tzhaar-fight-cave",
+    "title": "TzHaar Fight Cave",
+    "text": "Endurance PvM challenge culminating in TzTok-Jad (Fire cape).",
+    "requirements": {
+      "quests": "",
+      "skills": ["combat"],
+      "skillLevels": [70]
+    }
+  },
+  {
+    "slug": "tzhaar-fight-pit",
+    "title": "TzHaar Fight Pit",
+    "text": "Free-for-all PvP arena with Tokkul rewards.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "shades-of-mortton",
+    "title": "Shades of Mort'ton",
+    "text": "Rebuild the temple and cremate shades for keys and loot.",
+    "requirements": {
+      "quests": "[Shades of Mort'ton (quest)](https://oldschool.runescape.wiki/w/Shades_of_Mort%27ton_(quest))",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "blast-mining",
+    "title": "Blast Mining",
+    "text": "Lovakengj activity using dynamite to extract ore for good Mining XP/GP.",
+    "requirements": {
+      "quests": "",
+      "skills": ["mining"],
+      "skillLevels": [43]
+    }
+  },
+  {
+    "slug": "shooting-stars",
+    "title": "Shooting Stars",
+    "text": "Track and mine fallen stars around Gielinor; celestial shards and XP.",
+    "requirements": {
+      "quests": "",
+      "skills": ["mining"],
+      "skillLevels": [10]
+    }
+  },
+  {
+    "slug": "volcanic-mine",
+    "title": "Volcanic Mine",
+    "text": "High-level group Mining on Fossil Island with risk-reward mechanics.",
+    "requirements": {
+      "quests": "[Bone Voyage](https://oldschool.runescape.wiki/w/Bone_Voyage)",
+      "skills": ["mining"],
+      "skillLevels": [50]
+    }
+  },
+  {
+    "slug": "mahogany-homes",
+    "title": "Mahogany Homes",
+    "text": "Construction contracts around Gielinor for points and carpentry rewards.",
+    "requirements": {
+      "quests": "",
+      "skills": ["construction"],
+      "skillLevels": [1]
+    }
+  },
+  {
+    "slug": "guardians-of-the-void",
+    "title": "Guardians of the Void (PC variant events)",
+    "text": "Occasional Pest Control style variants/events. Use regular Pest Control if unavailable.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "lms-casual",
+    "title": "LMS (Casual)",
+    "text": "Unranked queue for Last Man Standing. Good practice without rating changes.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
+    }
+  },
+  {
+    "slug": "lms-ranked",
+    "title": "LMS (Ranked)",
+    "text": "Ranked queue for Last Man Standing with rating and leaderboard.",
+    "requirements": {
+      "quests": "",
+      "skills": [],
+      "skillLevels": []
     }
   }
 ]
