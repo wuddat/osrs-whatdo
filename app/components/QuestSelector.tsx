@@ -18,9 +18,10 @@ import { saveUserQuestData, getUserQuestData } from '@/utils/questStorage';
 
 interface QuestSelectorProps {
   username: string;
+  onSaveComplete?:() => void;
 }
 
-export default function QuestSelector({ username }: QuestSelectorProps) {
+export default function QuestSelector({ username, onSaveComplete }: QuestSelectorProps) {
   const [completedQuests, setCompletedQuests] = useState<string[]>([]);
   const [hasChanges, setHasChanges] = useState(false);
 
@@ -48,6 +49,10 @@ export default function QuestSelector({ username }: QuestSelectorProps) {
   const handleSave = () => {
     saveUserQuestData(username, completedQuests);
     setHasChanges(false);
+
+    if (onSaveComplete) {
+        onSaveComplete();
+    }
   };
 
   const questsByCategory = {
@@ -67,6 +72,7 @@ export default function QuestSelector({ username }: QuestSelectorProps) {
     <Box sx={{ mt: 3 }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
         <Typography variant="h6">Quest Progress</Typography>
+        <Typography variant="body2">Check off quests you've completed already!</Typography>
         <Typography variant="body2" sx={{ color: 'var(--osrs-gold)' }}>
           {completedQuests.length} / {ALL_QUESTS.length} quests ({totalQuestPoints} QP)
         </Typography>
@@ -132,7 +138,7 @@ export default function QuestSelector({ username }: QuestSelectorProps) {
           variant="contained"
           fullWidth
           onClick={handleSave}
-          sx={{ mt: 2 }}
+          sx={{ mt: 2}}
         >
           Save Quest Progress
         </Button>

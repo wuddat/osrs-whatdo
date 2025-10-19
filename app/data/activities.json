@@ -5,6 +5,7 @@
     "text": "Runecraft-focused activity in the Temple of the Eye. Great points and unique rewards. See the wiki for rotation info and tips.",
     "requirements": {
       "quests": "[Temple of the Eye](https://oldschool.runescape.wiki/w/Temple_of_the_Eye)",
+      "questslug":["temple-of-the-eye"],
       "skills": ["runecrafting"],
       "skillLevels": [27]
     }

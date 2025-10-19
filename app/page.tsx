@@ -1,18 +1,45 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation'; 
 import { TextField, Button, Box, Typography, CircularProgress, ToggleButton, ToggleButtonGroup, Grid } from '@mui/material';
 import { fetchPlayerStats } from '@/services/osrsApi';
-import { PlayerStats } from '@/types/osrs';
+import { PlayerStats, UserQuestData } from '@/types/osrs';
 import SkillBadge from '@/components/SkillBadge';
 import QuestSelector from '@/components/QuestSelector';
+import { saveUserQuestData, getUserQuestData } from '@/utils/questStorage';
+import { activitySelector } from './utils/activitySelector';
 
 export default function Home() {
+  const router = useRouter();
   const [username, setUsername] = useState('');
   const [playerData, setPlayerData] = useState<PlayerStats | null>(null);
+  const [userQuestData, setUserQuestData] = useState<UserQuestData | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
+  const [questsSaved, setQuestsSaved] = useState<Boolean>(false);
+
+  const searchFilters: string[] = [
+    "pvm","skilling","quests","co-op","gathering","moneymaking"
+  ]
+
+  const recommendActivity = async () => {
+    console.log('Logged player data is: -----')
+    console.log(userQuestData),
+    console.log(playerData)
+
+    if (playerData && userQuestData){
+      const selectedActivity = activitySelector(playerData.skills, userQuestData.completedQuests,)
+      console.log('The selected activity is: ', selectedActivity)
+
+      if (selectedActivity){
+        router.push(`/activity/${selectedActivity}`);
+      } else {console.log('idk man somethin be fucky')}
+    }
+  }
+
+  
 
   const handleFilterChange = (
     event: React.MouseEvent<HTMLElement>,
@@ -26,11 +53,14 @@ export default function Home() {
    
     setLoading(true);
     setError('');
+    setUserQuestData(null);
     setPlayerData(null);
 
     try {
       const data = await fetchPlayerStats(username);
       setPlayerData(data);
+      const questData = await getUserQuestData(username);
+      setUserQuestData(questData);
     } catch (err) {
       setError('Player not found or profile is private');
     } finally {
@@ -72,22 +102,18 @@ export default function Home() {
      {/* Filter Buttons */}
       <Box sx={{ mb: 3 }}>
         <Typography variant="subtitle1" gutterBottom>
-          Filter by activity type:
+          What do you want to focus on?:
         </Typography>
         <ToggleButtonGroup
           value={selectedFilters}
           onChange={handleFilterChange}
           aria-label="activity filters"
         >
-          <ToggleButton value="pvm" aria-label="pvm">
-            PvM
+                  {Object.entries(searchFilters).map(([f,v]) =>(
+          <ToggleButton key={f} value={v} aria-label={v}>
+            {v}
           </ToggleButton>
-          <ToggleButton value="skilling" aria-label="skilling">
-            Skilling
-          </ToggleButton>
-          <ToggleButton value="quests" aria-label="quests">
-            Quests
-          </ToggleButton>
+        ))}
         </ToggleButtonGroup>
       </Box>
 
@@ -163,7 +189,21 @@ export default function Home() {
             ))}
             </Grid>
           </Box>
-          <QuestSelector username={playerData.username} />
+          <QuestSelector 
+            username={playerData.username} 
+            onSaveComplete={() => setQuestsSaved(true)}
+            />
+          {questsSaved && (
+            <Button
+              variant="contained"
+              fullWidth
+              onClick={() => recommendActivity()}
+              sx={{ mt: 2 , p:4}}
+              >
+              <Typography variant='h5'>Recommend Activity</Typography>
+            </Button>
+          )}
+            
         </Box>
       )}
       </Box>

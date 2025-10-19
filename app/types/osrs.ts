@@ -7,6 +7,7 @@ export interface PlayerSkill {
 export interface PlayerStats {
   username: string;
   skills: {
+    [key: string]: PlayerSkill;
     overall: PlayerSkill;
     attack: PlayerSkill;
     defence: PlayerSkill;
